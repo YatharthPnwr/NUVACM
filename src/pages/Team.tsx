@@ -2,18 +2,19 @@ import { MemberInfo } from "@/components/MemberInfo";
 import Navbar from "@/components/Navbar";
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 import WordFadeIn from "@/components/ui/word-fade-in";
-import Travon from "@/icons/Travon.jpeg";
+import Travon from "@/icons/TravonFin.jpeg";
 import Dharminf from "@/icons/dharminFinal.png";
 import Ray from "@/icons/RayFinal.png";
-import Amaan from "@/icons/Amaan-removebg-preview.png";
+import Amaan from "@/icons/Amaan-removebg-preview (1).png";
 import Jaideep from "@/icons/JaideepRaulji.png";
 import ashish from "@/icons/AshishJani.png";
 import { Footer } from "@/components/Footer";
 import logo from "@/assets/Frame 4.png";
 import yatharth from "@/icons/yatharthFinal2.png";
+
 export function Team() {
   return (
-    <div>
+    <div className="min-h-screen flex flex-col">
       <div className="absolute -z-30 w-full h-[910px]">
         <AnimatedGridPattern
           repeatDelay={2}
@@ -25,12 +26,7 @@ export function Team() {
       </div>
       <div className="z-50 flex items-center justify-between h-24 bg-black mb-10">
         <div className="logo bg-black">
-          <img 
-            className="rounded-2xl"
-            src={logo}
-            height={400}
-            width={470}
-          />
+          <img className="rounded-2xl" src={logo} height={400} width={470} />
         </div>
         <Navbar />
       </div>
@@ -41,7 +37,7 @@ export function Team() {
           delay={0.7}
         />
       </div>
-      <div className="flex flex-wrap w-full gap-10 justify-center">
+      <div className="flex flex-wrap w-full gap-5 justify-center px-4">
         <MemberInfo
           name="Ms. Ujwala Petigara"
           position="Faculty Sponsor"
@@ -55,6 +51,7 @@ export function Team() {
           linkedInProfileUrl="https://www.linkedin.com/in/travon-bhagat"
           TwitterProfileUrl="https://x.com/TravonBhagat?t=YJ15G5hhPILMpmsu-qaZUQ&s=09"
           imageUrl={Travon}
+          imgclassName="w-48 h-50"
         />
         <MemberInfo
           name="Amaan Surti"
@@ -84,7 +81,6 @@ export function Team() {
           TwitterProfileUrl="https://x.com/yatharthpnwr"
           imageUrl={yatharth}
         />
-
         <MemberInfo
           name="Dr. Jaideep Raulji"
           position="Faculty Sponsor"
@@ -92,7 +88,6 @@ export function Team() {
           TwitterProfileUrl=""
           imageUrl={Jaideep}
         />
-
         <MemberInfo
           name="Ashish Jani"
           position="Faculty Sponsor"
@@ -100,9 +95,7 @@ export function Team() {
           TwitterProfileUrl=""
           imageUrl={ashish}
         />
-
       </div>
-
       <Footer />
     </div>
   );
