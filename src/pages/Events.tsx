@@ -1,43 +1,28 @@
 import Navbar from "../components/Navbar";
 import AnimatedGridPattern from "../components/ui/animated-grid-pattern";
 import logo from "@/assets/Frame 4.png";
-import WordPullUp from "../components/ui/word-pull-up";
+// import WordPullUp from "../components/ui/word-pull-up";
 import { Footer } from "../components/Footer";
-import axios from "axios";
-import { BACKEND_URL } from "../../config";
-import { useEffect, useState } from "react";
+// import axios from "axios";
+// import { BACKEND_URL } from "../../config";
+// import { useEffect, useState } from "react";
+// import { EventDetails } from "@/components/EventDetails";
+// import { Marquee } from "@/components/magicui/marquee";
 import { EventDetails } from "@/components/EventDetails";
+import img1 from "../assets/eventImages/OneDrive/compressjpeg/1-min.jpg";
+import img2 from "../assets/eventImages/OneDrive/compressjpeg/2-min.jpg";
+import img3 from "../assets/eventImages/OneDrive/compressjpeg/3-min.jpg";
+import img4 from "../assets/eventImages/OneDrive/compressjpeg/4-min.jpg";
+import img5 from "../assets/eventImages/OneDrive/compressjpeg/5-min.jpg";
+import img6 from "../assets/eventImages/Event2/Image1E2.png";
+import img7 from "../assets/eventImages/Event2/Image2E2.png"; 
+import img8 from "../assets/eventImages/Event2/Image3E2.png";
+
 
 export default function Events() {
-  const [events, setEvents] = useState([]);
-
-  async function getEvents() {
-    try {
-      const response = await axios.get(`${BACKEND_URL}admin/dashboard/Event/`);
-
-      if (response.status === 200) {
-        setEvents(response.data.allEvents);
-        console.log(events);
-      } else {
-        console.log("Error occured while trying to fetch events");
-      }
-    } catch (e) {
-      console.log("Server Error occured while trying to fetch events");
-      console.log(e);
-    }
-  }
-
-  useEffect(() => {
-    getEvents();
-
-    return () => {
-      setEvents([]);
-    };
-  }, []);
-
   return (
     <>
-      <div className="absolute -z-30 w-full h-full">
+      <div className="fixed -z-30 inset-0 h-full w-full">
         <AnimatedGridPattern
           repeatDelay={2}
           width={100}
@@ -52,35 +37,39 @@ export default function Events() {
         </div>
         <Navbar />
       </div>
-      <div className="flex justify-center items-center text-4 text-white font-aleo">
-        {events && (
-          <div className="content flex gap-5 flex-wrap">
-            {events.map((event: any) => {
-              console.log(event._id);
-              return (
-                <EventDetails
-                  isAdmin={false}
-                  eventId={event._id}
-                  Heading={event.name}
-                  Description={event.desc}
-                  Image={event.photoLink}
-                  formLink={event.registrationLink}
-                  qrLink={event.qrLink}
-                  events={events}
-                  setEvents={setEvents}
-                />
-              );
-            })}
-          </div>
-        )}
-        {events.length === 0 && (
-          <WordPullUp
-            words="Coming Soon..."
-            className="text-center text-black font-mega-bold text-4xl p-2 font-aleo"
-          />
-        )}
+      <div className="w-full flex flex-col items-center overflow-hidden">
+        <h1 className="text-5xl md:text-6xl font-extrabold tracking-tighter mb-4 mt-2 text-center">
+          Event Gallery
+        </h1>
       </div>
 
+      {/* New Event Sections */}
+      <div className="flex flex-col gap-16 items-center justify-center w-full max-w-6xl mx-auto py-10">
+        <EventDetails
+          isAdmin={false}
+          Heading="NUV ACM Student Chapter Inauguration"
+          Description="The NUV ACM Student Chapter was officially inaugurated on 7th February 2025, uniting students and faculties to mark the beginning of an exciting journey in computing. The event featured an inspiring keynote by Dr. Rutvi Shah, ACM-W India Chair, highlighting the future of computing and ACM's role in career development. The inauguration was organized to raise awareness about ACM and its benefits, fostering a culture of innovation and collaboration across Navrachana University and neighboring institutions. Engaging discussions on upcoming workshops, hackathons, and industry collaborations energized participants, with students enthusiastically exploring coding challenges, the ACM Digital Library, and networking opportunities."
+          images={[img1, img2, img3, img4, img5]}
+          date="2025-02-07"
+          formLink="https://example.com/register1"
+          qrLink="https://example.com/qr1"
+          events={[]}
+          setEvents={() => {}}
+          reverse={false}
+          eventNumber={1}
+        />
+        <EventDetails
+          isAdmin={false}
+          Heading="Expert Talk: Technology Changing the Global Landscape by Mr. David Migdal"
+          Description="In his talk titled “Technology Changing the Global Landscape”, Mr. Migdal delved into the transformative role of emerging technologies across a variety of domains — including biotechnology, digital banking, life sciences, gaming, and enterprise software.He emphasized the growing importance of digital transformation and innovation as key drivers in shaping the future of industries worldwide. With a rich background in global IT strategy and enterprise innovation, Mr. Migdal offered attendees a valuable perspective on the dynamic and rapidly evolving technological landscape."
+          images={[img6, img7, img8, ]}
+          date="2025-04-24"
+          events={[]}
+          setEvents={() => {}}
+          reverse={true}
+          eventNumber={2}
+        />
+      </div>
       <Footer />
     </>
   );

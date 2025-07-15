@@ -18,8 +18,8 @@ export function Team() {
       <div className="absolute -z-30 w-full h-[910px]">
         <AnimatedGridPattern
           repeatDelay={2}
-          width={100}
-          height={100}
+          width={200}
+          height={108}
           numSquares={5}
           className=""
         />
@@ -95,6 +95,9 @@ export function Team() {
           TwitterProfileUrl=""
           imageUrl={ashish}
         />
+      </div>
+      <div className="mb-10">
+
       </div>
       <Footer />
     </div>
