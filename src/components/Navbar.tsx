@@ -17,7 +17,7 @@ function Navbar() {
             <div>Home</div>
           </a>
           <a
-            href="/"
+            href="/team"
             className="w-full hover:text-red-600 ease-out duration-200 cursor-pointer flex flex-col justify-center items-center gap-2 text-xs"
           >
             <div>

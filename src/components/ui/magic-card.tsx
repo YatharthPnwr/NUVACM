@@ -73,11 +73,11 @@ export function MagicCard({
     <div
       ref={cardRef}
       className={cn(
-        "group relative flex h-80 w-72 overflow-hidden rounded-xl bg-[#0a0a0d] border text-white",
+        "group relative flex h-80 w-72 overflow-hidden rounded-xl bg-gradient-to-br from-red-900 to-red-800 border border-red-700 text-white shadow-lg",
         className,
       )}
     >
-      <div className="relative z-10">{children}</div>
+      <div className="relative z-10 w-full ">{children}</div>
       <motion.div
         className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         style={{
