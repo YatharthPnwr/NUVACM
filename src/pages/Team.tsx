@@ -38,7 +38,7 @@ export function Team() {
           delay={0.7}
         />
       </div>
-      
+
       {/* Updated team section with full width grid */}
       <div className="flex-1 w-full px-4 sm:px-6 lg:px-8 py-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8 w-full max-w-7xl mx-auto">
@@ -46,9 +46,10 @@ export function Team() {
             <MemberInfo
               name="Ms. Ujwala Petigara"
               position="Faculty Officer"
-              linkedInProfileUrl="https://www.linkedin.com/in/ujwala-petigara-8ba29725a/?originalSubdomain=in"
+              linkedInProfileUrl=""
               TwitterProfileUrl=""
               imageUrl={Ujwala}
+              height="top-20"
             />
           </div>
           <div className="w-full h-96 flex">
@@ -58,6 +59,7 @@ export function Team() {
               linkedInProfileUrl="https://www.linkedin.com/in/travon-bhagat"
               TwitterProfileUrl="https://x.com/TravonBhagat?t=YJ15G5hhPILMpmsu-qaZUQ&s=09"
               imageUrl={Travon}
+              height="top-20"
             />
           </div>
           <div className="w-full h-96 flex">
@@ -67,6 +69,7 @@ export function Team() {
               linkedInProfileUrl="https://www.linkedin.com/in/amaan-surti-14b072206?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               TwitterProfileUrl="https://x.com/Amaan7399"
               imageUrl={Amaan}
+              height="top-20"
             />
           </div>
           <div className="w-full h-96 flex">
@@ -76,6 +79,7 @@ export function Team() {
               linkedInProfileUrl="https://www.linkedin.com/in/nagardharmin/"
               TwitterProfileUrl="https://x.com/dharminnagar"
               imageUrl={Dharminf}
+              height="top-20"
             />
           </div>
           <div className="w-full h-96 flex">
@@ -85,6 +89,7 @@ export function Team() {
               TwitterProfileUrl=""
               linkedInProfileUrl="https://www.linkedin.com/in/hir-ray-7953a0286?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               imageUrl={Ray}
+              height="object-top"
             />
           </div>
           <div className="w-full h-96 flex">
@@ -94,6 +99,7 @@ export function Team() {
               linkedInProfileUrl="https://www.linkedin.com/in/yatharth-singh-panwar-153058288/"
               TwitterProfileUrl="https://x.com/yatharthpnwr"
               imageUrl={yatharth}
+              height="top-20"
             />
           </div>
           <div className="w-full h-96 flex">
@@ -103,6 +109,7 @@ export function Team() {
               linkedInProfileUrl="https://www.linkedin.com/in/jaideepsinhraulji/?originalSubdomain=in"
               TwitterProfileUrl=""
               imageUrl={Jaideep}
+              height="top-20"
             />
           </div>
           <div className="w-full h-96 flex">
@@ -112,11 +119,12 @@ export function Team() {
               linkedInProfileUrl="https://www.linkedin.com/in/ashish-jani/"
               TwitterProfileUrl=""
               imageUrl={Ashish}
+              height="top-20"
             />
           </div>
         </div>
       </div>
-      
+
       <div className="mb-10"></div>
       <Footer />
     </div>

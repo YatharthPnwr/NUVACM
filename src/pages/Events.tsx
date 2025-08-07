@@ -15,9 +15,13 @@ import img3 from "../assets/eventImages/OneDrive/compressjpeg/3-min.jpg";
 import img4 from "../assets/eventImages/OneDrive/compressjpeg/4-min.jpg";
 import img5 from "../assets/eventImages/OneDrive/compressjpeg/5-min.jpg";
 import img6 from "../assets/eventImages/Event2/Image1E2.png";
-import img7 from "../assets/eventImages/Event2/Image2E2.png"; 
+import img7 from "../assets/eventImages/Event2/Image2E2.png";
 import img8 from "../assets/eventImages/Event2/Image3E2.png";
-
+import img9 from "../assets/eventImages/Event3/Rutu-mi.jpeg";
+import img10 from "../assets/eventImages/Event3/social-mi.jpeg";
+import img11 from "../assets/eventImages/Event3/Anchors-mi.jpeg";
+import img12 from "../assets/eventImages/Event3/GroupPhoto-mi.jpeg";
+import img13 from "../assets/eventImages/Event3/Aarya-mi.jpeg";
 
 export default function Events() {
   return (
@@ -62,12 +66,24 @@ export default function Events() {
           isAdmin={false}
           Heading="Expert Talk: Technology Changing the Global Landscape by Mr. David Migdal"
           Description="In his talk titled “Technology Changing the Global Landscape”, Mr. Migdal delved into the transformative role of emerging technologies across a variety of domains — including biotechnology, digital banking, life sciences, gaming, and enterprise software.He emphasized the growing importance of digital transformation and innovation as key drivers in shaping the future of industries worldwide. With a rich background in global IT strategy and enterprise innovation, Mr. Migdal offered attendees a valuable perspective on the dynamic and rapidly evolving technological landscape."
-          images={[img6, img7, img8, ]}
+          images={[img6, img7, img8]}
           date="2025-04-24"
           events={[]}
           setEvents={() => {}}
           reverse={true}
           eventNumber={2}
+        />
+
+        <EventDetails
+          isAdmin={false}
+          Heading="Expert Talk: Shaping Tomorrow – The Transformative Power of Nanotechnology By Dr. Rutu Parekh (Associate Professor, Dhirubhai Ambani University)"
+          Description="An expert talk on nanotechnology was delivered by Dr. Rutu Parekh, focusing on the transformative potential of nanoscience and its foundation in quantum mechanics. She explained how unique behaviors at the nanoscale, such as color variation due to quantum dots, open up groundbreaking possibilities. Real-world applications discussed included IoT, big data, laser projection, cosmetics, and nano-robots—many inspired by nature, like gecko toes and butterfly wings. The talk also introduced nanotechnology’s taxonomy—covering architecture, data representation, materials, and nanochemical oscillators—and highlighted promising career opportunities in material science, aerospace, and engineering."
+          images={[img9, img10, img11, img12, img13]}
+          date="2025-07-31"
+          events={[]}
+          setEvents={() => {}}
+          reverse={false}
+          eventNumber={3}
         />
       </div>
       <Footer />
