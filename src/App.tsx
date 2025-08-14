@@ -1,5 +1,6 @@
 import "./App.css";
 import Events from "../src/pages/Events";
+import UpcomingEvents from "../src/pages/UpcomingEvents";
 import { Landing } from "./pages/Landing";
 import { Team } from "./pages/Team";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="Team" element={<Team />} />
           <Route path="Events" element={<Events />} />
+          <Route path="UpcomingEvents" element={<UpcomingEvents />} />
           {/* <Route path="admin/login" element={<Login />} /> */}
           <Route path="admin/dashboard" element={<Dashboard />} />
           <Route path="admin" element={<Navigate to="login" />} />
