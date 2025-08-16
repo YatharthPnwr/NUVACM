@@ -11,8 +11,41 @@ import Particles from "@/components/ui/particles";
 import { Footer } from "@/components/Footer";
 import logo from "@/assets/Frame 4.png";
 import BenefitsCard from "@/components/BenefitsCard";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
 
 export function Landing() {
+  const navigate = useNavigate();
+  const [showDialog, setShowDialog] = useState(false);
+
+  useEffect(() => {
+    // Show alert dialog after component mounts
+    const timer = setTimeout(() => {
+      setShowDialog(true);
+    }, 2000); // Show dialog after 2 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleRegisterClick = () => {
+    setShowDialog(false);
+    navigate("/UpcomingEvents");
+  };
+
+  const handleCancelClick = () => {
+    setShowDialog(false);
+  };
+
   return (
     <div>
       <div className="absolute -z-10 flex h-screen w-full flex-col items-center justify-center overflow-hidden">
@@ -52,21 +85,17 @@ export function Landing() {
             </div>
             <div className="font-aleo font-bold text-xl leading-relaxed mx-auto mb-28 max-w-4xl">
               <a href="https://nuv.ac.in/">
-                <span className="text-red-600 underline">
-                  Navrachana University
-                </span>
+                <span className="text-red-600 underline">Navrachana University</span>
               </a>
-              , established in July 2009 in Vadodara, Gujarat, is a premier
-              private institution accredited with an 'A' grade by NAAC. It
-              offers a holistic, interdisciplinary curriculum emphasizing
-              real-world application. The university houses five schools:
-              Science, Engineering & Technology, Business & Law, Environmental
-              Design & Architecture, and Liberal Studies & Education, on a
-              modern campus. The Chapter is dedicated to fostering knowledge and
-              interest in modern computing—encompassing its science, design,
-              development, and applications—while promoting communication among
-              enthusiasts, primarily serving students at Navrachana University
-              and reaching out to the broader community.
+              , established in July 2009 in Vadodara, Gujarat, is a premier private institution
+              accredited with an 'A' grade by NAAC. It offers a holistic, interdisciplinary
+              curriculum emphasizing real-world application. The university houses five schools:
+              Science, Engineering & Technology, Business & Law, Environmental Design &
+              Architecture, and Liberal Studies & Education, on a modern campus. The Chapter is
+              dedicated to fostering knowledge and interest in modern computing—encompassing its
+              science, design, development, and applications—while promoting communication among
+              enthusiasts, primarily serving students at Navrachana University and reaching out to
+              the broader community.
             </div>
           </div>
         </div>
@@ -134,14 +163,12 @@ export function Landing() {
                     </a>
                     )
                   </strong>{" "}
-                  is a global organization dedicated to advancing computing as a
-                  science and profession. With over 100,000 members worldwide,
-                  ACM brings together educators, researchers, and professionals
-                  to address the challenges and opportunities in computing. The
-                  Navrachana University ACM Chapter joins this vast network,
-                  creating a platform for students and faculty to connect,
-                  learn, and contribute to the ever-evolving field of
-                  technology.
+                  is a global organization dedicated to advancing computing as a science and
+                  profession. With over 100,000 members worldwide, ACM brings together educators,
+                  researchers, and professionals to address the challenges and opportunities in
+                  computing. The Navrachana University ACM Chapter joins this vast network, creating
+                  a platform for students and faculty to connect, learn, and contribute to the
+                  ever-evolving field of technology.
                 </p>
               </div>
             </div>
@@ -156,9 +183,7 @@ export function Landing() {
                 />
                 <p className="text-5xl font-extrabold text-black">+</p>
               </div>
-              <div className="text-xl font-extrabold tracking-tighter text-black">
-                COUNTRIES
-              </div>
+              <div className="text-xl font-extrabold tracking-tighter text-black">COUNTRIES</div>
             </div>
           </div>
           <div className="h-28"></div>
@@ -172,20 +197,17 @@ export function Landing() {
             </div>
             <div className=" flex items-center max-w-3xl">
               <p className="pl-9 text-xl text-justify ">
-                The ACM Student Chapter envisions fostering an inclusive,
-                innovative, and collaborative environment where students can
-                excel in the field of computing and technology. Our chapter
-                serves as a bridge between academic learning and professional
-                excellence, empowering students to explore emerging trends,
-                contribute to impactful projects, and develop problem-solving
-                skills essential for the challenges of tomorrow. Through
-                workshops, hackathons, guest lectures, and collaborative
-                research opportunities, we aim to inspire curiosity and nurture
-                talent. By cultivating a vibrant community, we strive to promote
-                diversity, encourage interdisciplinary collaboration, and ignite
-                a passion for lifelong learning in the ever-evolving landscape
-                of computing. Together, we are building a foundation where the
-                students of today become the thought leaders, innovators, and
+                The ACM Student Chapter envisions fostering an inclusive, innovative, and
+                collaborative environment where students can excel in the field of computing and
+                technology. Our chapter serves as a bridge between academic learning and
+                professional excellence, empowering students to explore emerging trends, contribute
+                to impactful projects, and develop problem-solving skills essential for the
+                challenges of tomorrow. Through workshops, hackathons, guest lectures, and
+                collaborative research opportunities, we aim to inspire curiosity and nurture
+                talent. By cultivating a vibrant community, we strive to promote diversity,
+                encourage interdisciplinary collaboration, and ignite a passion for lifelong
+                learning in the ever-evolving landscape of computing. Together, we are building a
+                foundation where the students of today become the thought leaders, innovators, and
                 change-makers of the future.
               </p>
             </div>
@@ -193,6 +215,59 @@ export function Landing() {
         </div>
       </div>
       <Footer />
+
+      {/* AI Hackathon Alert Dialog */}
+      <AlertDialog open={showDialog} onOpenChange={setShowDialog}>
+        <AlertDialogContent className="w-xl w-full bg-black/95 border border-red-500/30 text-white">
+          <AlertDialogHeader>
+            <AlertDialogTitle className="text-2xl font-bold text-center text-red-400 mb-4">
+              🚀 Exciting News
+              <p className="text-lg font-semibold text-red-300">AI Hackathon is Coming Soon!</p>
+            </AlertDialogTitle>
+            <AlertDialogDescription asChild>
+              <div className="space-y-4">
+                {/* Event Poster */}
+                <div className="flex justify-center mb-6">
+                  <div className="relative w-80 h-96 bg-gradient-to-br from-red-600 via-red-700 to-black rounded-2xl p-6 shadow-2xl border border-red-500/50">
+                    {/* Poster Content */}
+                    <div className="h-full flex flex-col justify-between text-center">
+                      <img src="src/assets/AI_Hackathon_Poster.jpeg" />
+                    </div>
+
+                    {/* Decorative elements */}
+                    <div className="absolute top-2 right-2 w-6 h-6 bg-yellow-300 rounded-full opacity-80"></div>
+                    <div className="absolute bottom-2 left-2 w-4 h-4 bg-red-300 rounded-full opacity-60"></div>
+                  </div>
+                </div>
+
+                {/* Description */}
+                <div className="text-center text-white/90 space-y-3">
+                  
+                  {/* <p className="text-sm leading-relaxed">
+                    Join us for an incredible opportunity to innovate with AI, collaborate with
+                    talented developers, and compete for amazing prizes! Whether you're a beginner
+                    or expert, this hackathon offers the perfect platform to showcase your skills.
+                  </p> */}
+                </div>
+              </div>
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter className="gap-3 justify-center mt-3">
+            <AlertDialogCancel
+              onClick={handleCancelClick}
+              className="bg-gray-700 hover:bg-gray-600 text-white border-gray-600"
+            >
+              Maybe Later
+            </AlertDialogCancel>
+            <AlertDialogAction
+              onClick={handleRegisterClick}
+              className="bg-red-600 hover:bg-red-700 text-white border-red-500"
+            >
+              Register Now
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 }
