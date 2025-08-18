@@ -23,6 +23,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
+import AI_Hackathon_Poster from "../assets/AI_Hackathon_Poster.jpeg";
 
 export function Landing() {
   const navigate = useNavigate();
@@ -231,7 +232,7 @@ export function Landing() {
                   <div className="relative w-80 h-96 bg-gradient-to-br from-red-600 via-red-700 to-black rounded-2xl p-6 shadow-2xl border border-red-500/50">
                     {/* Poster Content */}
                     <div className="h-full flex flex-col justify-between text-center">
-                      <img src="src/assets/AI_Hackathon_Poster.jpeg" />
+                      <img src={AI_Hackathon_Poster} />
                     </div>
 
                     {/* Decorative elements */}

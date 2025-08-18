@@ -3,6 +3,7 @@ import AnimatedGridPattern from "../components/ui/animated-grid-pattern";
 import logo from "@/assets/Frame 4.png";
 import { Footer } from "../components/Footer";
 import { useState } from "react";
+import ai_hackathon from "../assets/ai_hackathon_form.jpg";
 
 export default function UpcomingEvents() {
   const [isHovered, setIsHovered] = useState(false);
@@ -37,7 +38,7 @@ export default function UpcomingEvents() {
             <div className="relative w-full max-w-xl aspect-square flex items-center justify-center shadow-2xl rounded-3xl overflow-hidden border-4 border-white/10 bg-black/60">
               {/* QR Code Placeholder - Replace with actual QR code image */}
               <div className="w-full h-full flex items-center justify-center bg-white rounded-3xl">
-               <img src="src/assets/ai_hackathon_form.jpg" alt="QR Code" />
+               <img src={ai_hackathon} alt="QR Code" />
                 {/* </div> */}
               </div>
 
