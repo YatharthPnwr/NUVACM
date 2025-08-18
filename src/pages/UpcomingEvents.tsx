@@ -9,7 +9,7 @@ export default function UpcomingEvents() {
 
   const handleRegisterClick = () => {
     // Replace with actual Luma link
-    window.open("https://lu.ma/ai-hackathon", "_blank");
+    window.open("https://forms.gle/tTJCJoRdf1GXTf1A9", "_blank");
   };
 
   return (
@@ -37,17 +37,8 @@ export default function UpcomingEvents() {
             <div className="relative w-full max-w-xl aspect-square flex items-center justify-center shadow-2xl rounded-3xl overflow-hidden border-4 border-white/10 bg-black/60">
               {/* QR Code Placeholder - Replace with actual QR code image */}
               <div className="w-full h-full flex items-center justify-center bg-white rounded-3xl">
-                <div className="w-80 h-80 bg-black rounded-2xl flex items-center justify-center">
-                  <div className="grid grid-cols-8 gap-1 p-4">
-                    {/* Simple QR code pattern placeholder */}
-                    {Array.from({ length: 64 }).map((_, i) => (
-                      <div
-                        key={i}
-                        className={`w-3 h-3 ${Math.random() > 0.5 ? "bg-black" : "bg-white"}`}
-                      />
-                    ))}
-                  </div>
-                </div>
+               <img src="src/assets/ai_hackathon_form.jpg" alt="QR Code" />
+                {/* </div> */}
               </div>
 
               {/* QR Code Label */}
