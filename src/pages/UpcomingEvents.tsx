@@ -16,7 +16,13 @@ export default function UpcomingEvents() {
   return (
     <>
       <div className="fixed -z-30 inset-0 h-full w-full">
-        <AnimatedGridPattern repeatDelay={2} width={100} height={100} numSquares={5} className="" />
+        <AnimatedGridPattern
+          repeatDelay={2}
+          width={100}
+          height={100}
+          numSquares={5}
+          className=""
+        />
       </div>
       <div className="z-50 flex items-center justify-between h-24 bg-black mb-10">
         <div className="logo bg-black">
@@ -38,7 +44,7 @@ export default function UpcomingEvents() {
             <div className="relative w-full max-w-xl aspect-square flex items-center justify-center shadow-2xl rounded-3xl overflow-hidden border-4 border-white/10 bg-black/60">
               {/* QR Code Placeholder - Replace with actual QR code image */}
               <div className="w-full h-full flex items-center justify-center bg-white rounded-3xl">
-               <img src={ai_hackathon} alt="QR Code" />
+                <img src={ai_hackathon} alt="QR Code" />
                 {/* </div> */}
               </div>
 
@@ -87,19 +93,41 @@ export default function UpcomingEvents() {
               <div className="absolute left-0 top-6 h-10 w-2 bg-gradient-to-b from-red-600 to-pink-400 rounded-r-xl" />
 
               <div className="text-2xl md:text-3xl font-extrabold text-white drop-shadow-lg mb-1 pl-6">
-                AI Hackathon
+                IndiGenius AI Hackathon
               </div>
 
               <div className="text-sm text-pink-200 mb-2 pl-6">Coming Soon</div>
 
-              <div className="text-sm md:text-base text-white/90 pl-6 text-justify mb-6">
-                Join us for an exciting AI Hackathon where innovation meets creativity! This event
-                brings together passionate developers, designers, and AI enthusiasts to collaborate
-                on cutting-edge artificial intelligence projects. Whether you're a beginner or an
-                expert, this hackathon offers the perfect opportunity to learn, build, and showcase
-                your skills in the rapidly evolving world of AI. Participants will work in teams to
-                develop innovative AI solutions, compete for amazing prizes, and network with
-                industry professionals.
+              <div className="text-sm md:text-base text-white/90 pl-6 text-justify mb-6 space-y-4">
+                <p>
+                  Get ready for the IndiGenius AI 8-Hour Hackathon, organized by
+                  the NUV ACM Student Chapter! This exciting event brings
+                  together passionate developers, designers, and AI enthusiasts
+                  to collaborate on cutting-edge projects. Teams of 3–5 members
+                  will harness the power of Artificial Intelligence to tackle
+                  real-world societal and campus-specific challenges. It’s the
+                  perfect opportunity to learn, build, and innovate, while
+                  competing for amazing prizes.
+                </p>
+                <div>
+                  <p className="font-bold">🏆 Prizes:</p>
+                  <ul className="list-disc list-inside pl-4">
+                    <li>1st Prize: ₹15,000</li>
+                    <li>2nd Prize: ₹10,000</li>
+                    <li>3rd Prize: ₹5,000</li>
+                  </ul>
+                </div>
+                <div className="mt-4">
+                  <p className="font-bold">💡 Registration Fees (per team):</p>
+                  <p className="pl-4">
+                    * Teams with at least one ACM member: ₹300
+                  </p>
+                  <p className="pl-4">* Teams with no ACM members: ₹400</p>
+                </div>
+                <p>
+                  Join us for a full day of creativity, collaboration, and
+                  problem-solving—where your ideas can make a real impact!
+                </p>
               </div>
 
               {/* Register Button */}

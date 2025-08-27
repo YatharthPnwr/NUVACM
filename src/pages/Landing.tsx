@@ -23,7 +23,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import AI_Hackathon_Poster from "../assets/AI_Hackathon_Poster.jpeg";
+import AI_Hackathon_Poster from "../assets/Blue Futuristic Artificial Intelligence Instagram Post .png";
 
 export function Landing() {
   const navigate = useNavigate();
@@ -86,17 +86,21 @@ export function Landing() {
             </div>
             <div className="font-aleo font-bold text-xl leading-relaxed mx-auto mb-28 max-w-4xl">
               <a href="https://nuv.ac.in/">
-                <span className="text-red-600 underline">Navrachana University</span>
+                <span className="text-red-600 underline">
+                  Navrachana University
+                </span>
               </a>
-              , established in July 2009 in Vadodara, Gujarat, is a premier private institution
-              accredited with an 'A' grade by NAAC. It offers a holistic, interdisciplinary
-              curriculum emphasizing real-world application. The university houses five schools:
-              Science, Engineering & Technology, Business & Law, Environmental Design &
-              Architecture, and Liberal Studies & Education, on a modern campus. The Chapter is
-              dedicated to fostering knowledge and interest in modern computing—encompassing its
-              science, design, development, and applications—while promoting communication among
-              enthusiasts, primarily serving students at Navrachana University and reaching out to
-              the broader community.
+              , established in July 2009 in Vadodara, Gujarat, is a premier
+              private institution accredited with an 'A' grade by NAAC. It
+              offers a holistic, interdisciplinary curriculum emphasizing
+              real-world application. The university houses five schools:
+              Science, Engineering & Technology, Business & Law, Environmental
+              Design & Architecture, and Liberal Studies & Education, on a
+              modern campus. The Chapter is dedicated to fostering knowledge and
+              interest in modern computing—encompassing its science, design,
+              development, and applications—while promoting communication among
+              enthusiasts, primarily serving students at Navrachana University
+              and reaching out to the broader community.
             </div>
           </div>
         </div>
@@ -164,12 +168,14 @@ export function Landing() {
                     </a>
                     )
                   </strong>{" "}
-                  is a global organization dedicated to advancing computing as a science and
-                  profession. With over 100,000 members worldwide, ACM brings together educators,
-                  researchers, and professionals to address the challenges and opportunities in
-                  computing. The Navrachana University ACM Chapter joins this vast network, creating
-                  a platform for students and faculty to connect, learn, and contribute to the
-                  ever-evolving field of technology.
+                  is a global organization dedicated to advancing computing as a
+                  science and profession. With over 100,000 members worldwide,
+                  ACM brings together educators, researchers, and professionals
+                  to address the challenges and opportunities in computing. The
+                  Navrachana University ACM Chapter joins this vast network,
+                  creating a platform for students and faculty to connect,
+                  learn, and contribute to the ever-evolving field of
+                  technology.
                 </p>
               </div>
             </div>
@@ -184,7 +190,9 @@ export function Landing() {
                 />
                 <p className="text-5xl font-extrabold text-black">+</p>
               </div>
-              <div className="text-xl font-extrabold tracking-tighter text-black">COUNTRIES</div>
+              <div className="text-xl font-extrabold tracking-tighter text-black">
+                COUNTRIES
+              </div>
             </div>
           </div>
           <div className="h-28"></div>
@@ -198,17 +206,20 @@ export function Landing() {
             </div>
             <div className=" flex items-center max-w-3xl">
               <p className="pl-9 text-xl text-justify ">
-                The ACM Student Chapter envisions fostering an inclusive, innovative, and
-                collaborative environment where students can excel in the field of computing and
-                technology. Our chapter serves as a bridge between academic learning and
-                professional excellence, empowering students to explore emerging trends, contribute
-                to impactful projects, and develop problem-solving skills essential for the
-                challenges of tomorrow. Through workshops, hackathons, guest lectures, and
-                collaborative research opportunities, we aim to inspire curiosity and nurture
-                talent. By cultivating a vibrant community, we strive to promote diversity,
-                encourage interdisciplinary collaboration, and ignite a passion for lifelong
-                learning in the ever-evolving landscape of computing. Together, we are building a
-                foundation where the students of today become the thought leaders, innovators, and
+                The ACM Student Chapter envisions fostering an inclusive,
+                innovative, and collaborative environment where students can
+                excel in the field of computing and technology. Our chapter
+                serves as a bridge between academic learning and professional
+                excellence, empowering students to explore emerging trends,
+                contribute to impactful projects, and develop problem-solving
+                skills essential for the challenges of tomorrow. Through
+                workshops, hackathons, guest lectures, and collaborative
+                research opportunities, we aim to inspire curiosity and nurture
+                talent. By cultivating a vibrant community, we strive to promote
+                diversity, encourage interdisciplinary collaboration, and ignite
+                a passion for lifelong learning in the ever-evolving landscape
+                of computing. Together, we are building a foundation where the
+                students of today become the thought leaders, innovators, and
                 change-makers of the future.
               </p>
             </div>
@@ -223,7 +234,9 @@ export function Landing() {
           <AlertDialogHeader>
             <AlertDialogTitle className="text-2xl font-bold text-center text-red-400 mb-4">
               🚀 Exciting News
-              <p className="text-lg font-semibold text-red-300">AI Hackathon is Coming Soon!</p>
+              <p className="text-lg font-semibold text-red-300">
+                AI Hackathon is Coming Soon!
+              </p>
             </AlertDialogTitle>
             <AlertDialogDescription asChild>
               <div className="space-y-4">
@@ -243,7 +256,6 @@ export function Landing() {
 
                 {/* Description */}
                 <div className="text-center text-white/90 space-y-3">
-                  
                   {/* <p className="text-sm leading-relaxed">
                     Join us for an incredible opportunity to innovate with AI, collaborate with
                     talented developers, and compete for amazing prizes! Whether you're a beginner
