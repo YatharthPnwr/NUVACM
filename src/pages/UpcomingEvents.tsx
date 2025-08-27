@@ -96,7 +96,7 @@ export default function UpcomingEvents() {
                 IndiGenius AI Hackathon
               </div>
 
-              <div className="text-sm text-pink-200 mb-2 pl-6">Coming Soon</div>
+              <div className="text-sm text-pink-200 mb-2 pl-6">2nd September 2025</div>
 
               <div className="text-sm md:text-base text-white/90 pl-6 text-justify mb-6 space-y-4">
                 <p>
@@ -133,6 +133,7 @@ export default function UpcomingEvents() {
               {/* Register Button */}
               <div className="pt-2 w-full flex items-center justify-center pl-6">
                 <button
+                  disabled
                   onClick={handleRegisterClick}
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
@@ -146,7 +147,7 @@ export default function UpcomingEvents() {
                     border-2 border-red-500/50 backdrop-blur-sm
                   `}
                 >
-                  Register Now!
+                  Registration Closed!
                 </button>
               </div>
             </div>

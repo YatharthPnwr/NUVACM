@@ -11,41 +11,30 @@ import Particles from "@/components/ui/particles";
 import { Footer } from "@/components/Footer";
 import logo from "@/assets/Frame 4.png";
 import BenefitsCard from "@/components/BenefitsCard";
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-} from "@/components/ui/alert-dialog";
-import AI_Hackathon_Poster from "../assets/Blue Futuristic Artificial Intelligence Instagram Post .png";
 
 export function Landing() {
-  const navigate = useNavigate();
-  const [showDialog, setShowDialog] = useState(false);
 
-  useEffect(() => {
-    // Show alert dialog after component mounts
-    const timer = setTimeout(() => {
-      setShowDialog(true);
-    }, 2000); // Show dialog after 2 seconds
+  // ALERT DIALOG POPUP
+  // const navigate = useNavigate();
+  // const [showDialog, setShowDialog] = useState(false);
 
-    return () => clearTimeout(timer);
-  }, []);
+  // useEffect(() => {
+  //   // Show alert dialog after component mounts
+  //   const timer = setTimeout(() => {
+  //     setShowDialog(true);
+  //   }, 2000); // Show dialog after 2 seconds
 
-  const handleRegisterClick = () => {
-    setShowDialog(false);
-    navigate("/UpcomingEvents");
-  };
+  //   return () => clearTimeout(timer);
+  // }, []);
 
-  const handleCancelClick = () => {
-    setShowDialog(false);
-  };
+  // const handleRegisterClick = () => {
+  //   setShowDialog(false);
+  //   navigate("/UpcomingEvents");
+  // };
+
+  // const handleCancelClick = () => {
+  //   setShowDialog(false);
+  // };
 
   return (
     <div>
@@ -227,60 +216,6 @@ export function Landing() {
         </div>
       </div>
       <Footer />
-
-      {/* AI Hackathon Alert Dialog */}
-      <AlertDialog open={showDialog} onOpenChange={setShowDialog}>
-        <AlertDialogContent className="w-xl w-full bg-black/95 border border-red-500/30 text-white">
-          <AlertDialogHeader>
-            <AlertDialogTitle className="text-2xl font-bold text-center text-red-400 mb-4">
-              🚀 Exciting News
-              <p className="text-lg font-semibold text-red-300">
-                AI Hackathon is Coming Soon!
-              </p>
-            </AlertDialogTitle>
-            <AlertDialogDescription asChild>
-              <div className="space-y-4">
-                {/* Event Poster */}
-                <div className="flex justify-center mb-6">
-                  <div className="relative w-80 h-96 bg-gradient-to-br from-red-600 via-red-700 to-black rounded-2xl p-6 shadow-2xl border border-red-500/50">
-                    {/* Poster Content */}
-                    <div className="h-full flex flex-col justify-between text-center">
-                      <img src={AI_Hackathon_Poster} />
-                    </div>
-
-                    {/* Decorative elements */}
-                    <div className="absolute top-2 right-2 w-6 h-6 bg-yellow-300 rounded-full opacity-80"></div>
-                    <div className="absolute bottom-2 left-2 w-4 h-4 bg-red-300 rounded-full opacity-60"></div>
-                  </div>
-                </div>
-
-                {/* Description */}
-                <div className="text-center text-white/90 space-y-3">
-                  {/* <p className="text-sm leading-relaxed">
-                    Join us for an incredible opportunity to innovate with AI, collaborate with
-                    talented developers, and compete for amazing prizes! Whether you're a beginner
-                    or expert, this hackathon offers the perfect platform to showcase your skills.
-                  </p> */}
-                </div>
-              </div>
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter className="gap-3 justify-center mt-3">
-            <AlertDialogCancel
-              onClick={handleCancelClick}
-              className="bg-gray-700 hover:bg-gray-600 text-white border-gray-600"
-            >
-              Maybe Later
-            </AlertDialogCancel>
-            <AlertDialogAction
-              onClick={handleRegisterClick}
-              className="bg-red-600 hover:bg-red-700 text-white border-red-500"
-            >
-              Register Now
-            </AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
     </div>
   );
 }
