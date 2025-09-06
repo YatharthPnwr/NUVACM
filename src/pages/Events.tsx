@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import AnimatedGridPattern from "../components/ui/animated-grid-pattern";
-import logo from "@/assets/Frame 4.png";
+import logo from "../assets/Frame 4.png";
 // import WordPullUp from "../components/ui/word-pull-up";
 import { Footer } from "../components/Footer";
 // import axios from "axios";

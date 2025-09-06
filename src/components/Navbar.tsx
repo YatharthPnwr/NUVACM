@@ -1,8 +1,6 @@
 import { Home } from "lucide-react";
 import { Users } from "lucide-react";
 import { Calendar } from "lucide-react";
-import { Clock } from "lucide-react";
-
 function Navbar() {
   return (
     <nav className="sticky top-0 text-white w-[500px] flex justify-center items-center font-aleo font-bold text-2xl">
@@ -34,15 +32,6 @@ function Navbar() {
               <Calendar size={20} />
             </div>
             <div>Events</div>
-          </a>
-          <a
-            href="/UpcomingEvents"
-            className="w-full hover:text-red-600 ease-out duration-200 cursor-pointer flex flex-col justify-center items-center gap-2 text-xs"
-          >
-            <div>
-              <Clock size={20} />
-            </div>
-            <div>Upcoming</div>
           </a>
         </nav>
       </div>

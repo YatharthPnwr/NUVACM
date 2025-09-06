@@ -10,10 +10,9 @@ import NumberTicker from "@/components/ui/number-ticker";
 import Particles from "@/components/ui/particles";
 import { Footer } from "@/components/Footer";
 import logo from "@/assets/Frame 4.png";
-import BenefitsCard from "@/components/BenefitsCard";
+import BenefitsCarousel from "@/components/BenefitsCarousel";
 
 export function Landing() {
-
   // ALERT DIALOG POPUP
   // const navigate = useNavigate();
   // const [showDialog, setShowDialog] = useState(false);
@@ -41,7 +40,7 @@ export function Landing() {
       <div className="absolute -z-10 flex h-screen w-full flex-col items-center justify-center overflow-hidden">
         <Meteors number={30} />
       </div>
-      <div className="absolute -z-30 w-full h-[910px]">
+      <div className="absolute -z-30 w-full h-[1450px]">
         <AnimatedGridPattern
           repeatDelay={2}
           width={100}
@@ -58,19 +57,19 @@ export function Landing() {
       </div>
       {/* Main Content */}
       <div className="flex flex-col min-h-[calc(100vh-6rem)] justify-center items-center">
-        <div className="relative w-full text-center mb-20">
+        <div className="relative w-full text-center p-1 mt-12">
           <WordPullUp
             words="NUV ACM"
             className="text-red-600 font-mega-bold text-9xl p-2 font-aleo"
           />
           <SparklesText
-            className="z-30 font-bold absolute left-1/2 transform -translate-x-1/2 text-transparent text-8xl p-2 font-aleo"
-            text="NUV ACM"
+            className="z-30 font-bold absolute left-1/2 transform -translate-x-1/2 text-transparent text-6xl font-aleo"
+            text="Student Chapter"
           />
 
           {/* Student Chapter and Description */}
-          <div className="max-w-6xl mx-auto px-4 mt-16">
-            <div className="text-black text-6xl font-extrabold mb-10 font-aleo">
+          <div className="max-w-6xl mx-auto px-4 mt-6">
+            <div className="text-black text-6xl font-extrabold -mt-1 font-aleo">
               Student Chapter
             </div>
             <div className="font-aleo font-bold text-xl leading-relaxed mx-auto mb-28 max-w-4xl">
@@ -98,47 +97,13 @@ export function Landing() {
             <Particles color="#b91c1c" />
           </div>
           <div className="">
-            <div className="text-3xl text-center font-bold mb-10  ">
+            <div className="mt-11 text-3xl text-center font-bold mb-12">
               <BlurredInComponent word="Why to Choose ACM?" />
             </div>
-            <div className="flex justify-center gap-12  mb-5 flex-wrap">
-              <BenefitsCard
-                title="Career Advancement"
-                desc="Subscribe to the ACM Digital Library for full-text articles, bibliographic data, research papers, and tutorials on cutting-edge technologies."
-                img="/assets/LandingPageAssets/CareerAdvancement.svg"
-              />
-              <BenefitsCard
-                title="Leadership"
-                desc="Opportunities for students to take up leadership roles within
-                  the chapter and showcase their contributions to a global
-                  audience."
-                img="/assets/LandingPageAssets/Leadership.svg"
-              />
-
-              <BenefitsCard
-                title="Networking Opportunities"
-                desc="A chance to connect with ACM’s global community of
-                  professionals, academicians, and students through conferences,
-                  webinars, and mentorship programs."
-                img="/assets/LandingPageAssets/Networking.svg"
-              />
-              <BenefitsCard
-                title="Research Opportunities"
-                desc="ACM offers research opportunities, connecting students to
-                  advancements in computing through publications, conferences,
-                  and special interest groups."
-                img="/assets/LandingPageAssets/ProffesionalDevelopment.svg"
-              />
-              <BenefitsCard
-                title="Skill Advancement"
-                desc="Hands-on learning experiences through workshops, hackathons,
-                  coding competitions, and seminars that cover various domains
-                  of computing and technology."
-                img="/assets/LandingPageAssets/Skills.svg"
-              />
-            </div>
+            {/* Benefits Carousel */}
+            <BenefitsCarousel />
           </div>
-          <div className="mt-16">
+          <div className="mt-32">
             <BlurredInComponent word="What is ACM?" />
           </div>
           <div className="w-full flex items-center justify-center mt-8">
