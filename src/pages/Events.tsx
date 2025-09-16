@@ -22,6 +22,15 @@ import img10 from "../assets/eventImages/Event3/social-mi.jpeg";
 import img11 from "../assets/eventImages/Event3/Anchors-mi.jpeg";
 import img12 from "../assets/eventImages/Event3/GroupPhoto-mi.jpeg";
 import img13 from "../assets/eventImages/Event3/Aarya-mi.jpeg";
+import img14 from "../assets/eventImages/Event4/img1.jpg";
+import img15 from "../assets/eventImages/Event4/img2.jpg";
+import img16 from "../assets/eventImages/Event4/img3.jpg";
+import img17 from "../assets/eventImages/Event4/img4.jpg";
+import img18 from "../assets/eventImages/Event4/img5.jpg";
+import img19 from "../assets/eventImages/Event4/img6.jpg";
+import img21 from "../assets/eventImages/Event4/Winner2.jpeg";
+import img20 from "../assets/eventImages/Event4/Winner1.jpeg";
+import img22 from "../assets/eventImages/Event4/Winner3.jpeg";
 
 export default function Events() {
   return (
@@ -84,6 +93,67 @@ export default function Events() {
           setEvents={() => {}}
           reverse={false}
           eventNumber={3}
+        />
+
+        <EventDetails
+          isAdmin={false}
+          Heading="IndiGenius A.I. Hackathon"
+          Description={
+            <div className="w-full break-words whitespace-pre-line">
+              <p>
+                The NUV ACM Student Chapter successfully hosted IndiGenius AI,
+                an 8-hour state-level hackathon supported by ACM India, on
+                September 2, 2025, at Navrachana University. With 28 teams from
+                top institutions like Ganpat University, G.H. Patel (CVM
+                University), SVIT, and MSU, the campus buzzed with innovation
+                from 8 AM to 5 PM as students built AI-powered solutions for
+                real-world campus challenges. The event celebrated creativity,
+                teamwork, and community spirit.
+              </p>
+              <div className="mt-4">
+                <span className="font-bold text-lg">🏆 Winners:</span>
+                <ul className="list-disc ml-6 mt-2 space-y-1">
+                  <li>
+                    <span className="font-semibold">🥇 1st Place:</span> Viraj
+                    Mangesh Warhade, Vansh Mehta, Het Mehta, Krish Dave, Chitral
+                    Shah – G H Patel College of Engg. & Tech. –{" "}
+                    <span className="font-bold">₹15,000</span>
+                  </li>
+                  <li>
+                    <span className="font-semibold">🥈 2nd Place:</span> Taksh
+                    Patel, Lavari Virkumar, Prajapati Maitra, Patanvadiya Vikash
+                    – Navrachana University –{" "}
+                    <span className="font-bold">₹10,000</span>
+                  </li>
+                  <li>
+                    <span className="font-semibold">🥉 3rd Place:</span> Aditi
+                    Sudheer, Vedant Gandhi, Diya Desai, Tisha Shah – Navrachana
+                    University – <span className="font-bold">₹5,000</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="mt-4">
+                A huge thanks to our mentors, faculty, and volunteers for making
+                this flagship event a grand success!
+              </div>
+            </div>
+          }
+          images={[
+            img18,
+            img14,
+            img15,
+            img16,
+            img17,
+            img19,
+            img20,
+            img21,
+            img22,
+          ]}
+          date="2025-09-02"
+          events={[]}
+          setEvents={() => {}}
+          reverse={true}
+          eventNumber={4}
         />
       </div>
       <Footer />

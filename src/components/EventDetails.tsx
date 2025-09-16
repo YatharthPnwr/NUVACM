@@ -7,7 +7,7 @@ interface EventDetailsProps {
   isAdmin: boolean;
   eventId?: string;
   Heading: string;
-  Description: string;
+  Description: React.ReactNode;
   formLink?: string;
   qrLink?: string;
   images: string[];
@@ -68,7 +68,11 @@ export const EventDetails = (props: EventDetailsProps) => {
   // }
 
   return (
-    <div className={`w-full flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} gap-10 items-center justify-center my-16 font-aleo relative`}>
+    <div
+      className={`w-full flex flex-col ${
+        reverse ? "md:flex-row-reverse" : "md:flex-row"
+      } gap-10 items-center justify-center my-16 font-aleo relative`}
+    >
       {props.isAdmin && (
         <Modal
           open={model}
@@ -86,7 +90,7 @@ export const EventDetails = (props: EventDetailsProps) => {
             className="w-full h-full object-cover transition-all duration-700 rounded-3xl shadow-xl"
             src={images[current]}
             alt={props.Heading + " image"}
-            style={{ minHeight: 500, maxHeight: 640 }}  
+            style={{ minHeight: 500, maxHeight: 640 }}
           />
           {total > 1 && (
             <>
@@ -110,7 +114,11 @@ export const EventDetails = (props: EventDetailsProps) => {
             {images.map((_, idx) => (
               <span
                 key={idx}
-                className={`block w-3 h-3 rounded-full border-2 ${idx === current ? "bg-red-600 border-red-600" : "bg-gray-200/60 border-white/60"}`}
+                className={`block w-3 h-3 rounded-full border-2 ${
+                  idx === current
+                    ? "bg-red-600 border-red-600"
+                    : "bg-gray-200/60 border-white/60"
+                }`}
               />
             ))}
           </div>
@@ -123,7 +131,8 @@ export const EventDetails = (props: EventDetailsProps) => {
           style={{
             minHeight: 320,
             maxHeight: 600,
-            boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.25), 0 1.5px 12px 0 rgba(236, 72, 153, 0.10)",
+            boxShadow:
+              "0 8px 32px 0 rgba(31, 38, 135, 0.25), 0 1.5px 12px 0 rgba(236, 72, 153, 0.10)",
             background: "rgba(24,24,27,0.98)",
             border: "1.5px solid rgba(236,72,153,0.18)",
             boxSizing: "border-box",
@@ -134,15 +143,21 @@ export const EventDetails = (props: EventDetailsProps) => {
           {/* Event number badge */}
           {props.eventNumber && (
             <div className="absolute -top-5 -right-5 z-10">
-              <div className="w-14 h-14 rounded-full bg-red-600 flex items-center justify-center text-white text-3xl font-extrabold shadow-lg border-4 border-white/30 select-none" style={{zIndex: 10, position: 'relative'}}>
+              <div
+                className="w-14 h-14 rounded-full bg-red-600 flex items-center justify-center text-white text-3xl font-extrabold shadow-lg border-4 border-white/30 select-none"
+                style={{ zIndex: 10, position: "relative" }}
+              >
                 {props.eventNumber}
               </div>
             </div>
           )}
           {/* Soft inner glow */}
-          <div className="pointer-events-none absolute inset-0 rounded-3xl" style={{
-            boxShadow: "0 0 60px 10px rgba(236,72,153,0.10) inset"
-          }} />
+          <div
+            className="pointer-events-none absolute inset-0 rounded-3xl"
+            style={{
+              boxShadow: "0 0 60px 10px rgba(236,72,153,0.10) inset",
+            }}
+          />
           {/* Accent bar */}
           <div className="absolute left-0 top-6 h-10 w-2 bg-gradient-to-b from-red-600 to-pink-400 rounded-r-xl" />
           <div className="text-2xl md:text-3xl font-extrabold text-white drop-shadow-lg mb-1 pl-6">
@@ -152,15 +167,19 @@ export const EventDetails = (props: EventDetailsProps) => {
             <div className="text-sm text-pink-200 mb-2 pl-6">
               {(() => {
                 const d = new Date(props.date as string);
-                return d.toLocaleDateString('en-GB', {
-                  day: '2-digit',
-                  month: 'short',
-                  year: 'numeric',
-                }).replace(/ /g, ' ');
+                return d
+                  .toLocaleDateString("en-GB", {
+                    day: "2-digit",
+                    month: "short",
+                    year: "numeric",
+                  })
+                  .replace(/ /g, " ");
               })()}
             </div>
           )}
-          <div className="text-sm md:text-base text-white/90 pl-6 text-justify">{props.Description}</div>
+          <div className="text-sm md:text-base text-white/90 pl-6 text-justify">
+            {props.Description}
+          </div>
           {!props.isAdmin && props.formLink && (
             <div className="pt-5 w-full flex items-center justify-center pl-6">
               {/* <Button
